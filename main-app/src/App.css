@@ -1,0 +1,19 @@
+/* App.css */
+
+body, html {
+    height: screen;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif; /* Assuming Quicksand is your desired font */
+    background-color: #1a1625;
+  }
+  
+  #root {
+    display: flex;
+    height: 100%;
+    /* position: relative; */
+  }
+  
+  .content {
+    flex-grow: 1;
+    overflow-y: auto;
+  }

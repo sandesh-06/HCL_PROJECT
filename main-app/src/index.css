@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-grid{
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr 100px;
+}
+
+.white-icon{
+   font-size: 22px;
+}
+
+.opening-icon{
+    color: white;
+}
