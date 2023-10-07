@@ -26,12 +26,12 @@ export default function GanttChart() {
   const rows = projects.map((project) => [
     project.pid, // Task ID
     project.pname, // Task Name
-    "", // Resource (you can fill this based on your project data)
+    "", // Resource 
     new Date(project.startDate), // Start Date
     new Date(project.endDate), // End Date
-    null, // Duration (you may calculate this based on start and end date)
-    0, // Percent Complete (you may set a default value)
-    null, // Dependencies (if any)
+    null, // Duration 
+    74, // Percent Complete 
+    null, // Dependencies 
   ]);
 
   const data = [columns, ...rows];
