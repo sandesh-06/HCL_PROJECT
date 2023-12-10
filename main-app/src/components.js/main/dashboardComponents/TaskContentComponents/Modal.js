@@ -2,12 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 import projectContext from "../../../../context/project/projectContext";
 import employeeContext from "../../../../context/employee/employeeContext";
 import taskContext from "../../../../context/task/taskContext";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import jwtDecode from "jwt-decode";
 export default function Modal(props) {
 
- 
+    const navigate = useNavigate();
     const closeModal=(e)=>{
         if(e.target.id === 'container' || e.target.id === 'close' ){
           props.setShowModal(false)
@@ -58,6 +58,9 @@ export default function Modal(props) {
         // console.log(updatedTasks)
         // setTask(updatedTasks);
         setTask({tname: "", tid: "", project: "", employee: "", dueDate: ""})
+        setTimeout(() => {
+          navigate('/home')
+        }, 500);
     }
   
 

@@ -40,7 +40,8 @@ export default function EmployerLogin() {
       navigate('/home')
     }
     else{
-      navigate("/")
+      navigate("/employer-login")
+      setCredentials({ empid: "", password: "" })
     }
   }
     
