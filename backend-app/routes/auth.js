@@ -7,7 +7,10 @@ const Employee = require('../models/EmployeeData')
 const {body, validationResult} = require('express-validator') 
 
 const jwt = require('jsonwebtoken') //using jwt to send authentication token
-const JWT_SECRET = "project+/project^status#$dashboard()for!an&IT=organization" //use this secret text to sign the auth token. NOTE: jwt secret should only be imported for env file, but for now this is fine.
+const JWT_SECRET = "project+/project^status#$dashboard()for!an&IT=organization" 
+//use this secret text to sign the auth token. NOTE: jwt secret should only be imported for env file, but for now this is fine.
+
+const bcrypt = require('bcryptjs') //for password encryption
 
 const fetchManager = require('../middleware/fetchManager')
 const fetchEmployee = require('../middleware/fetchEmployee')
