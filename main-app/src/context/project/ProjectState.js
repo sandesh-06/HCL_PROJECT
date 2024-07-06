@@ -9,7 +9,7 @@ export default function ProjectState(props) {
     
     //REQUEST TO FETCH ALL THE PROJECTS
     const getAllProjects = async () => {
-    const response = await fetch(`http://localhost:5000/api/get-project/all`, {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get-project/all`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -22,7 +22,7 @@ export default function ProjectState(props) {
 
   //REQUEST TO FETCH THE PROJECTS OF SPECIFIC MANAGER
   const getManagerProjects = async(managerId)=>{
-    const response = await fetch(`http://localhost:5000/api/get-project/specific/${managerId}`,{
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get-project/specific/${managerId}`,{
         method: "GET",
         headers:{
             "Content-Type": "application/json"

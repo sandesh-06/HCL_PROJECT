@@ -9,7 +9,7 @@ export default function TaskState(props) {
     
     //REQUEST TO FETCH ALL THE TASKS
     const getProjectTasks = async (managerId) => {
-        const response = await fetch(`http://localhost:5000/api/get-task/project-tasks/${managerId}`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get-task/project-tasks/${managerId}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -23,7 +23,7 @@ export default function TaskState(props) {
 
    //TO ADD TASK
     const addTask = async(tname, tid, dueDate, projectId, employeeId)=>{
-        const response = await fetch(`http://localhost:5000/api/get-task/add-task/${projectId}/${employeeId}`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get-task/add-task/${projectId}/${employeeId}`, {
             method: "POST",
             headers:{
                 "Content-Type": "application/json"
@@ -39,7 +39,7 @@ export default function TaskState(props) {
     //TO DELETE A TASK
     const deleteTask = async(taskId, managerId)=>{
      try{
-        await fetch(`http://localhost:5000/api/get-task/delete-task/${taskId}`,{
+        await fetch(`${process.env.REACT_APP_BACKEND_URL}/get-task/delete-task/${taskId}`,{
             method: "DELETE",
             headers:{
                 "Content-Type": "application/json",

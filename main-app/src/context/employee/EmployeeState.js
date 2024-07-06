@@ -10,7 +10,7 @@ export default function EmployerState(props) {
     
 
     const getEmployee = async (managerId) => {
-    const response = await fetch(`http://localhost:5000/api/get-team/${managerId}`, {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get-team/${managerId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
