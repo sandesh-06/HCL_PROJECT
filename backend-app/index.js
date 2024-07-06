@@ -8,9 +8,13 @@ const express = require('express')
 const app = express()
 const PORT = 5000
 
-
+const corsOptions = {
+  origin: 'https://projectplus-sandesh-06s-projects.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  optionsSuccessStatus: 204,
+};
 app.use(express.json())
-app.use(cors())
+app.use(cors(corsOptions));
 
   //ROUTES
 app.use('/api/auth', require('./routes/auth.js')) //route for authorization
