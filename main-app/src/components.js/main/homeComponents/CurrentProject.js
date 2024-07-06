@@ -23,9 +23,9 @@ export default function CurrentProject() {
     
 
   return (
-    <div className='col-span-2 row-span-2 bg-[#2f2b3a]  rounded-2xl grid grid-rows-5 '>
-        <div className='text-center text-white font-Quicksand text-[30px] font-extrabold'>Assigned Projects</div>
-         {projects.length === 0 &&  <div className="flex justify-center items-center text-[30px] font-bold w-full h-full text-slate-400">You don't have any projects assigned...</div>}
+    <div className='col-span-2 row-span-2 bg-[#2f2b3a]  rounded-2xl grid grid-rows-5'>
+        <div className='text-center text-white font-Quicksand  text-3xl lg:text-[30px] font-extrabold'>Assigned Projects</div>
+         {projects.length === 0 &&  <div className="flex justify-center items-center text-xl lg:text-[30px] font-bold w-full h-full text-slate-400">You don't have any projects assigned...</div>}
         {projects.map((target)=>{
             return <div className="bg-[#46424f] p-3 m-1 rounded-3xl row-span-2">
                     <DetailItem label="Project Name" value={target.pname}/>
