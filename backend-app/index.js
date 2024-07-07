@@ -9,7 +9,7 @@ const app = express()
 const PORT = 5000
 
 const corsOptions = {
-  origin: 'https://projectplus-sandesh-06s-projects.vercel.app',
+  origin: ['https://projectplus-sandesh-06s-projects.vercel.app', 'http://localhost:3000'],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   optionsSuccessStatus: 204,
 };

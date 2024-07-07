@@ -6,7 +6,7 @@ export default function GanttChart() {
   
   useEffect(() => {
     // Fetch projects from your backend API
-    fetch("http://localhost:5000/api/get-project/all")
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/get-project/all`)
       .then((response) => response.json())
       .then((data) => setProjects(data))
       .catch((error) => console.error("Error fetching projects:", error));
