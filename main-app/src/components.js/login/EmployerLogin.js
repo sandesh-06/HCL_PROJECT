@@ -12,7 +12,7 @@ export default function EmployerLogin() {
     e.preventDefault() //prevent the default actions
 
     //fetch the user
-    const response = await fetch('http://localhost:5000/api/auth/manager-login', {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/manager-login`, {
       method: "POST", //mention the method of request
       headers:{
         "Content-Type": "application/json"
