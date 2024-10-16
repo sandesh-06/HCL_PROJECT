@@ -1,7 +1,7 @@
 # "Project+" - Project Status Dashboard for an IT Organization
 
 ## Introduction
-Project+ is a project status dashboard designed to streamline project management within IT organizations. This dashboard caters specifically to managers, providing them with essential tools to efficiently oversee and manage their projects. While the current version focuses on the manager portal, future updates will introduce an employee portal.
+Project+ is a project status dashboard designed to streamline project management within IT organizations. This dashboard caters specifically to managers, providing them with essential tools to efficiently oversee and manage their projects. 
 
 ## Why Project+ Dashboard?
 
